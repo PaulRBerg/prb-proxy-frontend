@@ -1,0 +1,24 @@
+bracketSpacing: true
+plugins:
+  - "@trivago/prettier-plugin-sort-imports"
+  - "prettier-plugin-tailwindcss"
+pluginSearchDirs: false
+printWidth: 120
+proseWrap: "always"
+semi: true
+singleQuote: false
+tabWidth: 2
+trailingComma: "all"
+useTabs: false
+
+overrides:
+  - files: ["*.d.ts", "*.ts", "*.tsx"]
+    options:
+      importOrder:
+        - "^react(.*)"
+        - next/(.*)
+        - "<THIRD_PARTY_MODULES>"
+        - "@/(.*)"
+        - "^[./]"
+      importOrderSeparation: true
+      importOrderSortSpecifiers: true
